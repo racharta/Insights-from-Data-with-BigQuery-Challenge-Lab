@@ -1,0 +1,20 @@
+Query 5: Identifying specific day
+
+Build a query that will answer: "On what day did the total number of deaths cross 10000 in Italy?" The query should return the date in the format yyyy-mm-dd.
+Columns to reference:
+country_name
+cumulative_deceased
+
+Task - 5: Identifying specific day
+
+SELECT date
+
+FROM `bigquery-public-data.covid19_open_data.covid19_open_data`
+
+where country_name="Italy" and cumulative_deceased>10000
+
+order by date asc
+
+limit 1
+
+ 
